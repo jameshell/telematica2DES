@@ -1,4 +1,4 @@
-# Cifrado DES
+# Cifrado DES - Laboratorio 2
 Ejercicio para el laboratorio de telematica 2, se cifra un mensaje usando DES y se envia de un cliente a un servidor. El servidor en ultimas lo que hace es descifrarlo y enviar el mensaje original.
 
 ## Integrantes
