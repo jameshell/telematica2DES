@@ -4,7 +4,8 @@ import pyDes
 
 def Main():
         #Definimos HOST y PORT
-        host = '127.0.0.1'
+        #El ping es el del PC del SERVIDOR
+        host = '172.30.10.81'
         port = 5000
 #Creamos el SOCKET
         mySocket = socket.socket()
