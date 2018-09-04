@@ -17,7 +17,7 @@ def Main():
     conn, addr = mySocket.accept()
     print("Conexion hecha desde: " + str(addr))
 
-#Creamos el argumento
+#Creamos el argumento!!!!!
     k = pyDes.des(b"DESCRYPT", pyDes.CBC, b"\0\0\0\0\0\0\0\0",
               pad=None, padmode=pyDes.PAD_PKCS5)
 

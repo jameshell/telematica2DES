@@ -12,7 +12,7 @@ def Main():
         mySocket.connect((host, port))
 #Preparamos el mensaje a enviar
         message = input(" -> ")
-#Creamos el argumento
+#Creamos el argumento!!!!
         k = pyDes.des(b"DESCRYPT", pyDes.CBC, b"\0\0\0\0\0\0\0\0",
                     pad=None, padmode=pyDes.PAD_PKCS5)
 
