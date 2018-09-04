@@ -14,7 +14,7 @@ def Main():
 #Preparamos el mensaje a enviar
         message = input(" -> ")
 #Creamos el argumento!!!!
-        k = pyDes.des(b"DESCRYPT", pyDes.CBC, b"\0\0\0\0\0\0\0\0",
+        k = pyDes.des(b"DESCRYPT", pyDes.ECB, b"\0\0\0\0\0\0\0\0",
                     pad=None, padmode=pyDes.PAD_PKCS5)
 
         while message != 'q':
