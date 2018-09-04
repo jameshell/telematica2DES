@@ -11,10 +11,14 @@ def Main():
         mySocket = socket.socket()
 #Como este es un CLIENTE usamos el metodo CONNECT
         mySocket.connect((host, port))
-#Preparamos el mensaje a enviar
-        message = input(" -> ")
+#Accedemos al archivo que esta alojado en el sistema de carpetas
+        with open('texto.txt', 'r') as archivo:
+                message = archivo.read()
+
+#Preparamos el mensaje a enviar (En este ejemplo ya no se usa porque tiene que ser un archivo)
+       #message = input(" -> ")
 #Creamos el argumento!!!!
-        k = pyDes.des(b"DESCRYPT", pyDes.CBC, b"\0\0\0\0\0\0\0\0",
+        k = pyDes.des(b"DESCRYPT", pyDes.ECB, b"\0\0\0\0\0\0\0\0",
                     pad=None, padmode=pyDes.PAD_PKCS5)
 
         while message != 'q':
