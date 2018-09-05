@@ -5,7 +5,7 @@ import pyDes
 def Main():
         #Definimos HOST y PORT
         #El ping es el del PC del SERVIDOR
-        host = '172.30.10.181'
+        host = "127.0.0.1"
         port = 5000
 #Creamos el SOCKET
         mySocket = socket.socket()
@@ -14,7 +14,8 @@ def Main():
 #Preparamos el mensaje a enviar
         message = input(" -> ")
 #Creamos el argumento!!!!
-        k = pyDes.des(b"DESCRYPT", pyDes.ECB, b"\0\0\0\0\0\0\0\0",
+#En este metodo en el segundo parametro solo cambia el PyDes.ECB por PyDes.ECB
+        k = pyDes.des(b"DESCRYPT", pyDes.CBC, b"\0\0\0\0\0\0\0\0",
                     pad=None, padmode=pyDes.PAD_PKCS5)
 
         while message != 'q':
