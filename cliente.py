@@ -13,12 +13,16 @@ def Main():
         mySocket.connect((host, port))
 #Preparamos el mensaje a enviar
         message = input(" -> ")
+#Llave para mandar al servidor
+        llave = b"DESCRYPT"
 #Creamos el argumento!!!!
-#En este metodo en el segundo parametro solo cambia el PyDes.ECB por PyDes.ECB
-        k = pyDes.des(b"DESCRYPT", pyDes.CBC, b"\0\0\0\0\0\0\0\0",
+#En este metodo en el segundo parametro solo cambia el PyDes.ECB por PyDEs.CBC
+        k = pyDes.des(llave, pyDes.CBC, b"\0\0\0\0\0\0\0\0",
                     pad=None, padmode=pyDes.PAD_PKCS5)
 
         while message != 'q':
+                #Enviar llave
+                mySocket.send(llave)
                 #Los pasamos a bytes
                 data2bytes = message.encode()
                 #Los ciframos
