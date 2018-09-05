@@ -19,7 +19,7 @@ def Main():
     print("Conexion hecha desde: " + str(addr))  
 
     while True:
-        #En este metodo en el segundo parametro solo cambia el PyDes.ECB por PyDEs.CBC
+            #En este metodo en el segundo parametro solo cambia el PyDes.ECB por PyDEs.CBC
             #Se recibe la llave dentro de los parametros!
             k = pyDes.des(conn.recv(1024), pyDes.CBC, b"\0\0\0\0\0\0\0\0",
                           pad=None, padmode=pyDes.PAD_PKCS5)
